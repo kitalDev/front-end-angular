@@ -1,0 +1,37 @@
+
+<div class="modal-header">
+  <h4 id="justify-center" class="modal-title m-auto">Détails adhérent</h4>
+</div>
+
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <span class="font-weight-bold">Prénom</span>: {{adherent.prenom}}
+    </div>
+    <div class="col-md-6 mb-2">
+      <span class="font-weight-bold">Nom</span>: {{adherent.nom}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <span class="font-weight-bold">Date de Naissance</span>: {{adherent.dateNaissance}}
+    </div>
+    <div class="col-md-6 mb-2">
+      <span class="font-weight-bold">Adresse</span>: {{adherent.adresse}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <span class="font-weight-bold">CNI</span>: {{adherent.cni}}
+    </div>
+    <div class="col-md-6 mb-2">
+      <span class="font-weight-bold">Service</span>: {{adherent.serve}}
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer justify-content-center">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+    <span class="fas fa-times"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+  </button>
+</div>

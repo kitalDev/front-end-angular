@@ -1,0 +1,24 @@
+<form *ngIf="versement" (ngSubmit)="updateVersement()">
+  <div class="modal-header">
+    <h4 id="justify-center" class="modal-title m-auto">Modifier un type de Versement</h4>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md">
+        <input id="prenom" type="text" class="form-control" name="prenom" [(ngModel)]="versement.type" placeholder="Prénom..."/>
+      </div>
+  </div>
+  </div>
+
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+      <span class="fas fa-times"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="jhi-confirm-delete-inscription" type="submit" class="btn btn-danger">
+      <span class="fas fa-save"></span>&nbsp;<span>Save</span>
+    </button>
+  </div>
+</form>
+

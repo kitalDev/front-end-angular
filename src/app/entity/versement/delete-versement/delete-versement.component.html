@@ -1,0 +1,19 @@
+<form *ngIf="versement" (ngSubmit)="confirmDelete(versement.id!)">
+  <div class="modal-header">
+    <h4 id="justify-center" class="modal-title m-auto">Confirm !</h4>
+  </div>
+
+  <div class="modal-body">
+    <p id="jhi-delete-inscription-heading" class="p-delete text-center">Veuillez confimer?</p>
+  </div>
+
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+      <span class="fas fa-times"></span>&nbsp;<span>Cancel</span>
+    </button>
+
+    <button type="submit" class="btn btn-danger">
+      <span class="fas fa-trash"></span>&nbsp;<span>Delete</span>
+    </button>
+  </div>
+</form>

@@ -1,0 +1,37 @@
+<form *ngIf="recette" (ngSubmit)="saveRecette()">
+  <div class="modal-header">
+    <h4 id="justify-center" class="modal-title m-auto">Nouvelle recette</h4>
+  </div>
+  <div class="modal-body">
+    <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+      <p *ngFor="let msg of errorMsg">{{msg}}</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <input id="prenom" type="text" class="form-control" name="prenom" [(ngModel)]="recette.montant" placeholder="Montont..."/>
+      </div>
+      <div class="col-md-6 mb-2">
+        <input id="nom" type="text" class="form-control" name="nom" [(ngModel)]="recette.adherent" placeholder="Periode..."/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <input id="dateNaissance" type="text" class="form-control" name="dateNaissance" [(ngModel)]="recette.typeRecette" placeholder="Type de cotisation... "/>
+      </div>
+      <div class="col-md-6 mb-2">
+        <input id="adresse" type="text" class="form-control" name="adresse" [(ngModel)]="recette.versement" placeholder="Adherents..."/>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+      <span class="fas fa-times"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="jhi-confirm-delete-inscription" type="submit" class="btn btn-danger">
+      <span class="fas fa-save"></span>&nbsp;<span>Save</span>
+    </button>
+  </div>
+</form>
+

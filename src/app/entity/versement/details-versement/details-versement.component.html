@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h4 id="justify-center" class="modal-title m-auto">Détails versment</h4>
+</div>
+
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md">
+      <span class="font-weight-bold">Type</span>: {{versement.type}}
+    </div>
+</div>
+</div>
+
+<div class="modal-footer justify-content-center">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+    <span class="fas fa-times"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+  </button>
+</div>

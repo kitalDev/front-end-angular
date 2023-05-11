@@ -1,0 +1,43 @@
+<form *ngIf="adherent" (ngSubmit)="updateSaved()">
+  <div class="modal-header">
+    <h4 id="justify-center" class="modal-title m-auto">Modifier adhérent</h4>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <input id="prenom" type="text" class="form-control" name="prenom" [(ngModel)]="adherent.prenom" placeholder="Prénom..."/>
+      </div>
+      <div class="col-md-6 mb-2">
+        <input id="nom" type="text" class="form-control" name="nom" [(ngModel)]="adherent.nom" placeholder="Nom..."/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <input id="dateNaissance" type="date" class="form-control" name="dateNaissance" [(ngModel)]="adherent.dateNaissance" placeholder="YYYY-MM-DD HH:mm"/>
+      </div>
+      <div class="col-md-6 mb-2">
+        <input id="adresse" type="text" class="form-control" name="adresse" [(ngModel)]="adherent.adresse" placeholder="Adresse..."/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <input id="cni" type="text" class="form-control" name="cni" [(ngModel)]="adherent.cni" placeholder="CNI..."/>
+      </div>
+      <div class="col-md-6 mb-2">
+        <input id="service" type="text" class="form-control" name="service" [(ngModel)]="adherent.serve" placeholder="Service..."/>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+      <span class="fas fa-times"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+    </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="jhi-confirm-delete-inscription" type="submit" class="btn btn-danger">
+      <span class="fas fa-save"></span>&nbsp;<span>Save</span>
+    </button>
+  </div>
+</form>
+

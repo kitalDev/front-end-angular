@@ -1,0 +1,59 @@
+<h3 id="page-heading" >
+  <div class="row">
+    <div class="col-md-4">
+      <form action="">
+        <input type="search" class="form-control" placeholder="Recherche...">
+      </form>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control" id="field_tuteur" name="tuteur" >
+        <option value="null" selected>filtre...</option>
+        <option value="0">valeur1</option>
+        <option value="1">valeur2</option>
+        <option value="2">valeur3</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <button (click)="add()" class="btn btn-primary btn-md float-right create-inscription">
+        <span class="fas fa-plus"></span>&nbsp;
+        <span>Nouveau</span>
+      </button>
+    </div>
+  </div>
+</h3>
+<div class="table-responsive" id="entities">
+  <table class="table table-striped table-hover" aria-describedby="page-heading">
+    <thead class="bg-dark">
+    <tr>
+      <th scope="col"><span class="fas fa-sort"></span>Adherent</th>
+      <th scope="col"><span class="fas fa-sort"></span>Montant</th>
+      <th scope="col"><span class="fas fa-sort"></span>TypeCotisation</th>
+      <th scope="col"><span class="fas fa-sort"></span>Versement</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of recettes">
+      <td>{{c.montant}}</td>
+      <td>{{c.adherent}}</td>
+      <td>{{c.typeRecette}}</td>
+      <td>{{c.versement}}</td>
+      <td class="text-right">
+        <div class="btn-group">
+
+          <button (click)="update(c)" class="btn btn-info btn-md">
+            <span class="fas fa-edit"></span>
+          </button>
+
+          <button (click)="detail(c)" class="btn btn-secondary btn-md">
+            <span class="fas fa-eye"></span>
+          </button>
+          <button (click)="delete(c)" class="btn btn-danger btn-md">
+            <span class="fas fa-trash"></span>
+          </button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
